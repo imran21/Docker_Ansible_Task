@@ -8,10 +8,10 @@ NOTE : As this codes runs on Amazon EC2 Machine, so the Public IP address of the
 
 After successfully running those task you can check through curl
 
-curl -I 54.245.220.141
-curl -I 54.245.220.141:8080
-curl --raw 54.245.220.141
-curl --raw 54.245.220.141:8080
-curl --I 54.245.220.141:8080/protected
-curl --I 54.245.220.141:8080/unprotected
-curl --raw 54.245.220.141:8080/php_info_test.php
+curl -I 54.245.220.141 <br>
+curl -I 54.245.220.141:8080 <br>
+curl --raw 54.245.220.141 <br>
+curl --raw 54.245.220.141:8080 <br>
+curl --I 54.245.220.141:8080/protected <br>
+curl --I 54.245.220.141:8080/unprotected/sample.eot <br>
+curl --raw 54.245.220.141:8080/php_info_test.php <br>
