@@ -1,0 +1,21 @@
+version: '3.2'
+
+services:
+ web_httpd_nginx:
+    build: .
+    image: dc_httpd_nginx:v1.1
+    container_name: "centos_httpd_nginx_task"
+    ports:
+       - 80:80
+       - 8080:8080
+    volumes:
+       - type: bind
+         source: ./docker_web_root_volumes/nginx_web_root_dir
+         target: /usr/local/nginx/html
+       - type: bind
+         source: ./docker_web_root_volumes/apache_web_root_dir
+         target: /var/www/html
+    tty: true
+volumes:
+ nginx_volume:
+ httpd_volume:
