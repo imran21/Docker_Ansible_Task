@@ -1,6 +1,5 @@
 ---
  - name: "Install php"
-   service:
+   yum:
      name: php
-     state: started
-     enabled: yes
+     state: present
