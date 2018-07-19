@@ -1,0 +1,6 @@
+---
+ - name: "Install php"
+   service:
+     name: php
+     state: started
+     enabled: yes
