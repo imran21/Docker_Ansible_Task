@@ -30,9 +30,11 @@
      mode: 0644
    with_fileglob:
      - ../files/httpd_web_dir/.*
+   tags: copy-httpd-htpasswd
 
  - name: "start httpd"
    service:
      name: httpd
      state: started
      enabled: yes
+   tags: start-httpd
