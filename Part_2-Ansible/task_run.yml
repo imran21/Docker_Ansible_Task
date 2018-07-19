@@ -1,0 +1,11 @@
+---
+ - hosts: demo_clients
+   roles:
+     - nginx
+     - php
+     - httpd
+
+#    - {role: nginx, tags: [ 'base-pkg', 'get-nginx-pkg', 'install-nginx-pkg', 'copy-nginx-index', 'template-reflect-nginx-conf', 'start-nginx' ]}
+#    - {role: httpd, tags: [ 'install-httpd', 'copy-httpd-index', 'template-reflect-httpd-conf', 'start-httpd'  ]}
+#    - {role: httpd, tags: [ 'copy-htpasswd' ]}
+#    - {role: php, tags: [ 'install-php' ]}
