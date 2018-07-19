@@ -1,0 +1,38 @@
+
+---
+ - name: "Copy httpd conf"
+   template:
+     src: ../files/httpd.conf
+     dest: /etc/httpd/conf/httpd.conf
+     owner: root
+     group: root
+     mode: 0644
+   tags: copy-httpd-conf
+
+ - name: "Copy httpd web root dir"
+   copy:
+     src: "{{ item }}"
+     dest: /var/www/html/
+     owner: root
+     group: root
+     mode: 0644
+   with_fileglob:
+     - ../files/httpd_web_dir/
+     - ../files/httpd_web_dir/.*
+   tags: copy-httpd-web-root
+
+ - name: "Copy .htpassd to /etc/httpd"
+   copy:
+     src: "{{ item }}"
+     dest: /etc/httpd/
+     owner: root
+     group: root
+     mode: 0644
+   with_fileglob:
+     - ../files/httpd_web_dir/.*
+
+ - name: "start httpd"
+   service:
+     name: httpd
+     state: started
+     enabled: yes
