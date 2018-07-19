@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Docker_Ansible_Task
 This Repository Contains the Docker and Ansible code for the task mentioned in Task_question file.
 
@@ -10,3 +11,6 @@ NOTE : As this codes runs on Amazon EC2 Machine, so the Public IP address of the
 
 
 
+=======
+# Docker_Ansible_Task
+>>>>>>> bb091c6d671619e8dc948a8db1f91ca3a794bf64
