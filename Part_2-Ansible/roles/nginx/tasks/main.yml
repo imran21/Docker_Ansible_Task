@@ -1,0 +1,26 @@
+
+---
+ - name: "Map local to webNginx root/html"
+   copy:
+    src: /root/ansible_writes/roles/nginx/files/nginx_root_dir/
+    dest: /usr/local/nginx/html/
+    owner: root
+    group: root
+    mode: 0755
+   tags: nginx-rootdir-template-reflect
+
+
+ - name: "Map Config file to nginx conf /usr/local/nginx/conf"
+   template:
+     src: /root/ansible_writes/roles/nginx/files/nginx.conf
+     dest: /usr/local/nginx/conf/nginx.conf
+     owner: root
+     group: root
+     mode: 0755
+   tags: nginx-conf-template-reflect
+
+ - name: "start nginx server"
+   shell: |
+     cd /usr/local/nginx/sbin
+     ./nginx
+   tags: nginx-start
