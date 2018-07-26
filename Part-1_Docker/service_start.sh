@@ -4,4 +4,4 @@ cd /usr/local/nginx/sbin
 
 ./nginx
 
-/usr/sbin/httpd -k start
+/usr/sbin/http start
